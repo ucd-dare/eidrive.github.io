@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="CarDreamer.">
+  <!-- <meta name="keywords" content="Nerfies, D-NeRF, NeRF"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EI-Drive:</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://kit.fontawesome.com/617d51c1cc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">EI-Drive: An Edge-Intelligent Autonomous Driving Platform for Cooperative Perception</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Hanchu Zhou<sup>1</sup>,</span>
+            <span class="author-block">
+              Edward Xie<sup>2</sup>,</span>
+            <span class="author-block">
+              Wei Shao<sup>3</sup>,</span>
+            <span class="author-block">
+              Dechen Gao<sup>1</sup>,</span>
+            <span class="author-block">
+              Michelle Dong<sup>4</sup>,</span>
+            <span class="author-block">
+              Junshan Zhang<sup>1</sup>,</span>
+                
+              
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of California, Davis,</span>
+            <span class="author-block"><sup>2</sup>xxx</span>
+          </div>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Documentation Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa-solid fa-book"></i>
+                  </span>
+                  <span>Documentation</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--/ Framework. -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image with Caption Example</title>
+  <style>
+    .image-container {
+      text-align: center; /* Center the figure horizontally */
+      margin: 20px 0; /* Add some margin to separate the figure from other content */
+    }
+    .responsive-image {
+      width: 80%; /* Set the width to 90% of the container */
+      height: auto; /* Maintain the aspect ratio */
+    }
+    .caption {
+      font-size: 1em; /* Adjust the font size of the caption */
+      color: #555; /* Set the color of the caption text */
+      margin-top: 10px; /* Add some space above the caption */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="image-container">
+    <figure>
+      <img src="./static/images/framework.png" alt="Description of the image" class="responsive-image">
+      <!-- <h3 class="subtitle">Right turn SFOV</h3> -->
+    </figure>
+  </div>
+
+</body>
+
+<!--/ Abstract. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Autonomous vehicle testing in real-world environments is both costly and unsafe, calling for the development of advanced simulation platforms that incorporate cooperative perception and communication models to enhance safety and performance in complex driving scenarios. Current platforms like CARLA provide realistic environments,  but do not provide comprehensive support for cooperative perception where multiple agents share information to overcome  limitations such as occlusion. Additionally, these platforms often fail to simulate critical transmission characteristics like latency and error, which impact AV performance in real-world scenarios. To address these gaps, we introduce EI-Drive, an edge-intelligent autonomous driving simulation platform that integrates cooperative perception with real-time transmission models. Built on the CARLA framework, EI-Drive enables vehicles to fuse data from multiple sources, improving situational awareness and safety in complex environments. The platform features modules to simulate transmission latency and errors, providing a more realistic testbed for autonomous driving algorithms. With its modular design, EI-Drive allows for detailed testing of sensing, perception, planning, and control in cooperative driving scenarios. Experiments using EI-Drive demonstrate significant improvements in vehicle safety and performance, particularly in scenarios with complex traffic dynamics and network conditions. By addressing the limitations of existing platforms, EI-Drive offers a comprehensive tool for advancing research in cooperative autonomous driving.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- Text Column -->
+      <div class="column is-four-fifths has-text-centered">
+        <h2 class="title is-3">Seamlessly Simulates Cooperative Perception and Edge Communication</h2>
+        <div class="content has-text-justified">
+          <p>
+            Integrating cooperative perception with edge communication, EI-Drive allows the exploration of how communication latency and errors affect not only cooperative perception but also the overall performance of autonomous vehicles.
+          </p>
+        </div>
+        <h3 class="subtitle is-5 has-text-weight-bold"> Collision avoidance and traffic detection with cooperative perception</h3>
+        <div class="content has-text-justified">
+          <p>
+            EI-Drive has various built-in scenarios tailored for cooperative perception experiments, where the spectator vehicles and RSUs share perception information with the ego vehicle.
+          </p>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- New Table with GIFs and Texts -->
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <table style="border-collapse: collapse; width: 100%;">
+          <tr style="border: none;">
+            <td align="center" style="border: none; padding: 0;">
+              <img src="./static/gifs/6_coop2_coop_CarPOV.gif" alt="Gif 1" style="height: 210px; width: auto;">
+              <br><b>Ego vehicle</b>
+            </td>
+            <td align="center" style="font-size: 20px; line-height: 1.2; font-weight: bold; border: none; vertical-align: middle; padding: 0 10px;">
+              ➕
+            </td>
+            <td align="center" style="border: none; padding: 0;">
+              <img src="./static/gifs/6_coop2_coop_CameraPOVgif.gif" alt="Gif 2" style="height: 210px; width: auto;">
+              <br><b>Spectator vehicle</b>
+            </td>
+            <td align="center" style="font-size: 20px; line-height: 1.2; font-weight: bold; border: none; vertical-align: middle; padding: 0 10px;">
+              ➡️
+            </td>
+            <td align="center" style="border: none; padding: 0;">
+              <img src="./static/gifs/6_coop2_coop_POV.gif" alt="Gif 3" style="height: 210px; width: auto;">
+              <br><b>Cooperative perception</b>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <table style="border-collapse: collapse; width: 100%;">
+          <tr style="border: none;">
+            <td align="center" style="border: none; padding: 0;">
+              <img src="./static/gifs/10_coop6_both_BlackCarPOV.gif" alt="Gif 1" style="height: 190px; width: auto;">
+              <br><b>Ego vehicle</b>
+            </td>
+            <td align="center" style="font-size: 20px; line-height: 1.2; font-weight: bold; border: none; vertical-align: middle; padding: 0 10px;">
+              ➕
+            </td>
+            <td align="center" style="border: none; padding: 0;">
+              <img src="./static/gifs/10_coop6_both_CameraPOV.gif" alt="Gif 2" style="height: 190px; width: auto;">
+              <br><b>RSU</b>
+            </td>
+            <td align="center" style="font-size: 20px; line-height: 1.2; font-weight: bold; border: none; vertical-align: middle; padding: 0 10px;">
+              ➡️
+            </td>
+            <td align="center" style="border: none; padding: 0;">
+              <img src="./static/gifs/10_coop6_bothPOV.gif" alt="Gif 3" style="height: 190px; width: auto;">
+              <br><b>Cooperative perception</b>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <table style="border-collapse: collapse; width: 100%;">
+          <tr style="border: none;">
+            <td align="center" style="border: none; padding: 0;">
+              <img src="./static/gifs/8_coop4_coop_BlackCarPOV.gif" alt="Gif 1" style="height: 190px; width: auto;">
+              <br><b>Ego vehicle</b>
+            </td>
+            <td align="center" style="font-size: 20px; line-height: 1.2; font-weight: bold; border: none; vertical-align: middle; padding: 0 10px;">
+              ➕
+            </td>
+            <td align="center" style="border: none; padding: 0;">
+              <img src="./static/gifs/8_coop4_coop_TopCameraPOV.gif" alt="Gif 2" style="height: 190px; width: auto;">
+              <br><b>RSU</b>
+            </td>
+            <td align="center" style="font-size: 20px; line-height: 1.2; font-weight: bold; border: none; vertical-align: middle; padding: 0 10px;">
+              ➡️
+            </td>
+            <td align="center" style="border: none; padding: 0;">
+              <img src="./static/gifs/8_coop4_coop_BirdPOV.gif" alt="Gif 3" style="height: 190px; width: auto;">
+              <br><b>Cooperative perception</b>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <p>
+      <br>  
+    </p>
+
+    <div class="columns is-centered">
+      <!-- Text Column -->
+      <div class="column is-four-fifths has-text-centered">
+        <h3 class="subtitle is-5 has-text-weight-bold"> Transmission latency and errors</h3>
+        <div class="content has-text-justified">
+          <p>
+            EI-Drive has great flexibility to simply apply transmission latency and errors to any perception processes, allowing the researches across both communication and autonomous driving. The transmission latency and errors not only impair the performance of cooperative perception, but also have negtive influence to the behavior of the ego vehicle.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <table style="border-collapse: collapse; width: 100%;">
+          <tr style="border: none;">
+            <td align="center" valign="top" style="border: none; padding: 0px 10px;">
+              <img src="./static/gifs/5_coop1_coop_POV.gif" alt="Gif 1" style="height: 180px; width: auto;">
+              <br><b>Cooperative perception</b>
+              <br>✅
+            </td>
+            <td align="center" valign="top" style="border: none; padding: 0px 10px;">
+              <img src="./static/gifs/5_coop1_coopError_POV.gif" alt="Gif 2" style="height: 180px; width: auto;">
+              <br><b>Cooperative perception + Transmission errors</b>
+              <br>❌
+            </td>
+            <td align="center" valign="top" style="border: none; padding: 0px 10px;">
+              <img src="./static/gifs/5_coop1_coopLatency_POV.gif" alt="Gif 3" style="height: 180px; width: auto;">
+              <br><b>Cooperative perception + Transmission latency</b>
+              <br>❌
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <table style="border-collapse: collapse; width: 100%;">
+          <tr style="border: none;">
+            <td align="center" valign="top" style="border: none; padding: 0px 10px;">
+              <img src="./static/gifs/8_server/8_coop4_coop_POV.gif" alt="Gif 1" style="height: 180px; width: auto;">
+              <br><b>Cooperative perception</b>
+            </td>
+            <td align="center" valign="top" style="border: none; padding: 0px 10px;">
+              <img src="./static/gifs/8_server/8_coop4_coopError_BirdPOV.gif" alt="Gif 2" style="height: 180px; width: auto;">
+              <br><b>Cooperative perception + Transmission errors</b>
+            </td>
+            <td align="center" valign="top" style="border: none; padding: 0px 10px;">
+              <img src="./static/gifs/8_server/8_coop4_coopLatency_BirdPOV.gif" alt="Gif 3" style="height: 180px; width: auto;">
+              <br><b>Cooperative perception + Transmission latency</b>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div> 
+
+    <p>
+      <br>  
+    </p>
+
+    <div class="columns is-centered">
+      <!-- Text Column -->
+      <div class="column is-four-fifths has-text-centered">
+        <h3 class="subtitle is-5 has-text-weight-bold"> Perception methods and multi-modality</h3>
+        <div class="content has-text-justified">
+          <p>
+            EI-Drive supports multiple perception methods and multi-modal sensor inputs, greatly enriches the experiment settings.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <table style="border-collapse: collapse; width: 100%;">
+          <tr style="border: none;">
+            <td align="center" valign="top" style="border: none; padding: 0px 10px;">
+              <img src="./static/images/1_OvertakeImg_Multimodel.png" alt="Gif 1" style="height: 250px; width: auto;">
+              <br><b>Multi-modal inputs</b>
+            </td>
+            <td align="center" valign="top" style="border: none; padding: 0px 10px;">
+              <img src="./static/images/1_OvertakeImg_Perception.png" alt="Gif 2" style="height: 250px; width: auto;">
+              <br><b>Multiple perception methods</b>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiment results</h2>
+        <div class="content has-text-justified">
+          <p>
+            We conduct extensive experiments related to cooperative perception and transmission latency and errors to evaluate their influence on the overall performance.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <!-- Text Column -->
+      <div class="column is-four-fifths has-text-centered">
+        <h3 class="subtitle is-5 has-text-weight-bold"> Collision avoidance experiments</h3>
+        <div class="content has-text-justified">
+          <p>
+            In collision avoidance, the ego vehicle is affected by cooperative perception with different settings. Here the larger minimal distance indicates better safety. The tables below demonstrate that cooperative perception improves safety, especially the data shared by RSUs, and the transmission latency and error impair the performance.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <table style="border-collapse: collapse; width: 100%;">
+          <tr style="border: none;">
+            <td align="center" valign="top" style="border: none; padding: 0px 10px;">
+              <img src="./static/images/table1.png" alt="Multi-modal inputs" style="max-width: 90%; height: auto;">
+              <br>
+            </td>
+          </tr>
+          <tr style="border: none;">
+            <td align="center" valign="top" style="border: none; padding: 0px 10px;">
+              <img src="./static/images/table2.png" alt="Multi-modal inputs" style="max-width: 80%; height: auto;">
+
+            </td>
+          </tr>
+        </table>
+        
+      </div>
+    </div>
+    <br>
+
+    <div class="columns is-centered">
+      <!-- Text Column -->
+      <div class="column is-four-fifths has-text-centered">
+        <h3 class="subtitle is-5 has-text-weight-bold"> Traffic detection experiments</h3>
+        <div class="content has-text-justified">
+          <p>
+            The figures below demonstrate that cooperative perception significantly extends the perception capability of the ego vehicle, especially the data shared by RSUs.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <table style="border-collapse: collapse; width: 100%;">
+          <tr style="border: none;">
+            <td align="center" valign="top" style="border: none; padding: 0px 10px;">
+              <img src="./static/images/7_numberOfObjects.png" alt="Multi-modal inputs" style="max-width: 60%; height: auto;">
+              <br><b>Coop. scenario 3.</b>
+            </td>
+          </tr>
+          <tr style="border: none;">
+            <td align="center" valign="top" style="border: none; padding: 0px 10px;">
+              <img src="./static/images/8_numberOfObjects.png" alt="Multi-modal inputs" style="max-width: 60%; height: auto;">
+              <br><b>Coop. scenario 4.</b>
+            </td>
+          </tr>
+          <tr style="border: none;">
+            <td align="center" valign="top" style="border: none; padding: 0px 10px;">
+              <img src="./static/images/Vehicle&RSU_numberOfObjects.png" alt="Multi-modal inputs" style="max-width: 60%; height: auto;">
+              <br><b>Comparison between the spectator vehicle and RSU.</b>
+            </td>
+          </tr>
+        </table>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{CarDreamer2024,
+      title = {{CarDreamer: Open-Source Learning Platform for World Model based Autonomous Driving}},
+      author = {Dechen Gao, Shuangyu Cai, Hanchu Zhou, Hang Wang, Iman Soltani, Junshan Zhang},
+      journal = {arXiv preprint arXiv:2405.09111},
+      year = {2024},
+      month = {May}
+    }</code></pre>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        Page template borrowed from <a
+          href="https://github.com/nerfies/nerfies.github.io">source code</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
