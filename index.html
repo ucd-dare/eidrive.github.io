@@ -49,7 +49,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">EI-Drive: An Edge-Intelligent Autonomous Driving Platform for Cooperative Perception</h1>
+          <h1 class="title is-1 publication-title">EI-Drive: A Platform for Cooperative Perception with Realistic Communication Models</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               Hanchu Zhou<sup>1</sup>,</span>
@@ -69,7 +69,9 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>University of California, Davis,</span>
-            <span class="author-block"><sup>2</sup>xxx</span>
+            <span class="author-block"><sup>2</sup>Johns Hopkins University,</span>
+            <span class="author-block"><sup>3</sup>data61,</span>
+            <span class="author-block"><sup>3</sup>Monta Vista High School,</span>
           </div>
 
 
@@ -152,7 +154,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Autonomous vehicle testing in real-world environments is both costly and unsafe, calling for the development of advanced simulation platforms that incorporate cooperative perception and communication models to enhance safety and performance in complex driving scenarios. Current platforms like CARLA provide realistic environments,  but do not provide comprehensive support for cooperative perception where multiple agents share information to overcome  limitations such as occlusion. Additionally, these platforms often fail to simulate critical transmission characteristics like latency and error, which impact AV performance in real-world scenarios. To address these gaps, we introduce EI-Drive, an edge-intelligent autonomous driving simulation platform that integrates cooperative perception with real-time transmission models. Built on the CARLA framework, EI-Drive enables vehicles to fuse data from multiple sources, improving situational awareness and safety in complex environments. The platform features modules to simulate transmission latency and errors, providing a more realistic testbed for autonomous driving algorithms. With its modular design, EI-Drive allows for detailed testing of sensing, perception, planning, and control in cooperative driving scenarios. Experiments using EI-Drive demonstrate significant improvements in vehicle safety and performance, particularly in scenarios with complex traffic dynamics and network conditions. By addressing the limitations of existing platforms, EI-Drive offers a comprehensive tool for advancing research in cooperative autonomous driving.
+            The growing interest in autonomous driving calls for realistic simulation platforms capable of accurately simulating cooperative perception process in realistic traffic scenarios. Existing studies for cooperative perception often have not accounted for communication latency and errors in real-world environments. To address this gap, we introduce EI-Drive, an edge-AI based autonomous driving simulation platform that integrates advanced cooperative perception with   more realistic communication models. Built on the CARLA framework, EI-Drive features new modules for cooperative perception while  taking into account communication latency and errors, providing a more realistic platform for evaluating cooperative perception algorithms. In particular,  the platform enables vehicles to fuse data from multiple sources, improving situational awareness and safety in complex environments. With its modular design, EI-Drive allows for detailed exploration of sensing, perception, planning, and control in various cooperative driving scenarios. Experiments using EI-Drive demonstrate significant improvements in vehicle safety and performance, particularly in scenarios with complex traffic flow and network conditions.
           </p>
         </div>
       </div>
@@ -164,10 +166,10 @@
     <div class="columns is-centered">
       <!-- Text Column -->
       <div class="column is-four-fifths has-text-centered">
-        <h2 class="title is-3">Seamlessly Simulates Cooperative Perception and Edge Communication</h2>
+        <h2 class="title is-3">Seamlessly Simulates Cooperative Perception and Realistic Communication Models</h2>
         <div class="content has-text-justified">
           <p>
-            Integrating cooperative perception with edge communication, EI-Drive allows the exploration of how communication latency and errors affect not only cooperative perception but also the overall performance of autonomous vehicles.
+            Integrating cooperative perception with realistic communication models, EI-Drive allows the exploration of how communication latency and errors affect not only cooperative perception but also the overall performance of autonomous vehicles.
           </p>
         </div>
         <h3 class="subtitle is-5 has-text-weight-bold"> Collision avoidance and traffic detection with cooperative perception</h3>
@@ -270,10 +272,10 @@
     <div class="columns is-centered">
       <!-- Text Column -->
       <div class="column is-four-fifths has-text-centered">
-        <h3 class="subtitle is-5 has-text-weight-bold"> Transmission latency and errors</h3>
+        <h3 class="subtitle is-5 has-text-weight-bold"> Communication latency and errors</h3>
         <div class="content has-text-justified">
           <p>
-            EI-Drive has great flexibility to simply apply transmission latency and errors to any perception processes, allowing the researches across both communication and autonomous driving. The transmission latency and errors not only impair the performance of cooperative perception, but also have negtive influence to the behavior of the ego vehicle.
+            EI-Drive has great flexibility to simply apply communication latency and errors to any perception processes, allowing the researches across both communication and autonomous driving. The communication latency and errors not only impair the performance of cooperative perception, but also have negtive influence to the behavior of the ego vehicle.
           </p>
 
         </div>
@@ -291,12 +293,12 @@
             </td>
             <td align="center" valign="top" style="border: none; padding: 0px 10px;">
               <img src="./static/gifs/5_coop1_coopError_POV.gif" alt="Gif 2" style="height: 180px; width: auto;">
-              <br><b>Cooperative perception + Transmission errors</b>
+              <br><b>Cooperative perception + Communication errors</b>
               <br>❌
             </td>
             <td align="center" valign="top" style="border: none; padding: 0px 10px;">
               <img src="./static/gifs/5_coop1_coopLatency_POV.gif" alt="Gif 3" style="height: 180px; width: auto;">
-              <br><b>Cooperative perception + Transmission latency</b>
+              <br><b>Cooperative perception + Communication latency</b>
               <br>❌
             </td>
           </tr>
@@ -314,11 +316,11 @@
             </td>
             <td align="center" valign="top" style="border: none; padding: 0px 10px;">
               <img src="./static/gifs/8_server/8_coop4_coopError_BirdPOV.gif" alt="Gif 2" style="height: 180px; width: auto;">
-              <br><b>Cooperative perception + Transmission errors</b>
+              <br><b>Cooperative perception + Communication errors</b>
             </td>
             <td align="center" valign="top" style="border: none; padding: 0px 10px;">
               <img src="./static/gifs/8_server/8_coop4_coopLatency_BirdPOV.gif" alt="Gif 3" style="height: 180px; width: auto;">
-              <br><b>Cooperative perception + Transmission latency</b>
+              <br><b>Cooperative perception + Communication latency</b>
             </td>
           </tr>
         </table>
@@ -371,7 +373,7 @@
         <h2 class="title is-3">Experiment results</h2>
         <div class="content has-text-justified">
           <p>
-            We conduct extensive experiments related to cooperative perception and transmission latency and errors to evaluate their influence on the overall performance.
+            We conduct extensive experiments related to cooperative perception and communication latency and errors to evaluate their influence on the overall performance.
           </p>
         </div>
       </div>
@@ -383,7 +385,7 @@
         <h3 class="subtitle is-5 has-text-weight-bold"> Collision avoidance experiments</h3>
         <div class="content has-text-justified">
           <p>
-            In collision avoidance, the ego vehicle is affected by cooperative perception with different settings. Here the larger minimal distance indicates better safety. The tables below demonstrate that cooperative perception improves safety, especially the data shared by RSUs, and the transmission latency and error impair the performance.
+            In collision avoidance, the ego vehicle is affected by cooperative perception with different settings. Here the larger minimal distance indicates better safety. The tables below demonstrate that cooperative perception improves safety, especially the data shared by RSUs, and the communication latency and error impair the performance.
           </p>
 
         </div>
