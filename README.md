@@ -1,9 +1,9 @@
-# 📷 Cooperative Perception with Edge Communication: EI-Drive 🚕
+# 📷 EI-Drive: Cooperative Perception with Realistic Communication Models 🚕
 
 <div align="center">
     <a href="">
         <img src="https://img.icons8.com/nolan/32/api.png" alt="CarDreamer API Documents" />
-        EI-Drive API Documents
+        API Documents (coming soon)
     </a>
     &nbsp;|&nbsp;
     <a href="">
@@ -21,32 +21,32 @@
 
 ______________________________________________________________________
 
-Experience the seamless integration of **cooperative perception** and **edge communication** in autonomous driving simulation.
+Experience the seamless integration of **cooperative perception** and **realistic communication models** in autonomous driving simulation.
 <!-- 
 > \[!NOTE\]
 >
-> - **August 2024:** Support transmission error in intention sharing. -->
+> - **August 2024:** Support communication error in intention sharing. -->
 
 
-## **Looking for an advanced autonomous driving platform that seamlessly simulates cooperative perception and edge communication? Choose EI-Drive!**
+## **Looking for an advanced autonomous driving platform that seamlessly simulates cooperative perception and realistic communication models? Choose EI-Drive!**
 
-Integrating cooperative perception with edge communication, EI-Drive allows the exploration how communication latency and errors affect not only cooperative perception but also the overall performance of autonomous vehicles.
+- Integrating cooperative perception with realistic communication models, EI-Drive allows the exploration how communication latency and errors affect not only cooperative perception but also the overall performance of autonomous vehicles.
 
-A streamlined implementation with an end-to-end pipeline and built-in scenarios. Highly customizable components allow you to tailor your experiments.
+- A streamlined implementation with a AD pipeline and built-in scenarios. Highly customizable components allow you to tailor your experiments.
 
-Clear visualization makes the results highly visible and easy to interpret.
+- Clear visualization makes the results highly visible and easy to interpret.
 
 ## 🚗 Edge-Intelligence Autonomous Driving Platform
 
-An open-source platform provides solution for joint simulation of edge communication and cooperative perception, aimed at safe and efficient cooperative driving automation.
+An open-source platform provides solution for joint simulation of realistic communication models and cooperative perception, aimed at safe and efficient cooperative driving automation.
 
-- 🌞 **AV pipeline**: An end-to-end pipeline encompassing environment, sensing, perception, planning, and control.
+- 🌞 **AD pipeline**: An AD pipeline encompassing environment, sensing, perception, planning, and control.
 - 📸 **Cooperative perception**: Flexible cooperative perception with customizable agents, methods, tasks, and visualization.
-- 📡 **Transmission model**: Simulate the key characteristics, transmission latency and errors, in data transmission between the edge agents, interacting seamlessly with the perception module.
+- 📡 **Realistic communication models**: Simulate the key characteristics, communication latency and errors, in data communication between the edge agents, interacting seamlessly with the perception module.
 
 ![EI-Drive framework](.assets/framework.png)
 
-**Documentation: [EI-Drive API Documents]()**
+**Documentation: [EI-Drive API Documents (coming soon)]()**
 
 **Looking for more techincal details? Check our report here! [Paper link]()**
 
@@ -115,8 +115,8 @@ The perception results have significant influences on the ego vehicle's behavior
 </table>
 
 
-### Transmission latency and errors
-EI-Drive has great flexibility to simply apply transmission latency and errors to any perception processes, allowing the researches across both communication and autonomous driving. The transmission latency and errors not only impair the performance of cooperative perception, but also have negtive influence to the behavior of the ego vehicle.
+### Communication latency and errors
+EI-Drive has great flexibility to simply apply communication latency and errors to any perception processes, allowing the researches across both communication and autonomous driving. The communication latency and errors not only impair the performance of cooperative perception, but also have negtive influence to the behavior of the ego vehicle.
 
 <table style="border-collapse: collapse; width: 100%;">
   <tr style="border: none;">
@@ -127,12 +127,12 @@ EI-Drive has great flexibility to simply apply transmission latency and errors t
     </td>
     <td align="center" valign="top" style="border: none; padding: 0px 10px;">
       <img src=".assets/5_coop1_coopError_POV.gif" alt="Gif 2" style="height: 180px;">
-      <br><b>Cooperative perception + Transmission errors</b>
+      <br><b>Cooperative perception + communication errors</b>
       <br>❌
     </td>
     <td align="center" valign="top" style="border: none; padding: 0px 10px;">
       <img src=".assets/5_coop1_coopLatency_POV.gif" alt="Gif 3" style="height: 180px;">
-      <br><b>Cooperative perception + Transmission latency</b>
+      <br><b>Cooperative perception + communication latency</b>
       <br>❌
     </td>
   </tr>
@@ -146,11 +146,11 @@ EI-Drive has great flexibility to simply apply transmission latency and errors t
     </td>
     <td align="center" valign="top" style="border: none; padding: 0px 10px;">
       <img src=".assets/8_server/8_coop4_coopError_BirdPOV.gif" alt="Gif 2" style="height: 180px;">
-      <br><b>Cooperative perception + Transmission errors</b>
+      <br><b>Cooperative perception + communication errors</b>
     </td>
     <td align="center" valign="top" style="border: none; padding: 0px 10px;">
       <img src=".assets/8_server/8_coop4_coopLatency_BirdPOV.gif" alt="Gif 3" style="height: 180px;">
-      <br><b>Cooperative perception + Transmission latency</b>
+      <br><b>Cooperative perception + communication latency</b>
     </td>
   </tr>
 </table>
@@ -270,7 +270,7 @@ python EI_Drive.py test_scenario=coop_perception_1
 
 💡 Please note that this config file is a different file with ``test_scenario/coop_perception_1.yaml`` abovementioned, even they have the same name.
 
-### Transmission Latency and Errors
+### Communication Latency and Errors
 To enable latency and errors, open the config file in ``test_scenario/scenario/coop_perception_1.yaml`` that defines the details of the scenario. Set ``transmission_latency: true`` and ``errors: true`` for the ego vehicle with ``id=0`` and the participant (RSU in this scenario) with ``id=-1``.
 
 Then run the simulation
@@ -278,7 +278,7 @@ Then run the simulation
 python EI_Drive.py test_scenario=coop_perception_1
 ```
 
-💡 Please ensure ``coop_perception: true`` has been set for the RSU and the ego vehicle, since the latency and errors work when the data transmission exists.
+💡 Please ensure ``coop_perception: true`` has been set for the RSU and the ego vehicle, since the latency and errors work when the data communication exists.
 
 ## 🌟 Citation
 
