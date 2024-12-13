@@ -2,7 +2,7 @@
 
 <div align="center">
     <a href="">
-        <img src="https://img.icons8.com/nolan/32/api.png" alt="CarDreamer API Documents" />
+        <img src="https://img.icons8.com/nolan/32/api.png" alt="EI-Drive API Documents" />
         API Documents (coming soon)
     </a>
     &nbsp;|&nbsp;
@@ -292,7 +292,7 @@ If you find this repository useful, please cite this paper:
 
 ## 👥 Contributors
 
-Special thanks to the community for your valuable contributions and support in making CarDreamer better for everyone!
+Special thanks to the community for your valuable contributions and support in making EI-Drive better for everyone!
 
 <!-- readme: contributors -start -->
 <table>
